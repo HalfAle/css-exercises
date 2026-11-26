@@ -12,6 +12,12 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex;
+  /* align-items: center; */
+  /* hoeft niet, de flex containers hier in hebben align-items-center, 
+  dus bij deze is het niet nodig? */
+  justify-content: space-between;
+  padding: .5rem;
 }
 
 .profile-image {
@@ -20,6 +26,7 @@ body {
   border-radius: 50%;
   width: 48px;
   height: 48px;
+  flex-shrink:0;
 }
 
 .logo {
@@ -45,4 +52,28 @@ a {
 
 ul {
   list-style-type: none;
+  display: flex;
+  margin:0;
+  padding: 0;
+  gap: 1rem;
 }
+
+.left, .right {
+  display: flex;
+  align-items:center;
+  gap: 1rem;
+}
+
+/* 
+ik snap het nog niet, wanneer staan dingen verticaal gecentreerd?
+align-items hoeft alleen bij de linker en rechter containers
+header container -> past zich aan aan hoogte van linker en rechter container?
+	linker en rechter container -> align-items
+		ul container -> li staan "vanzelf" verticaal gecentreerd, ik kan dit ook niet veranderen
+    -> antwoord: dat komt door align-items in .left, haal dit weg en de li's staan bovenaan
+
+default align-items is stretch
+de header container heeft geen hoogte, past zich aan aan zijn inhoud.
+.left container: align items center
+  de ul is een flex-item dat standaard bovenin de .left container zou staan, nu wordt ie verticaal gecentreerd
+*/
