@@ -132,11 +132,16 @@ button {
     border-radius: 10px;
     border: none;
     margin: 0 .5rem .5rem 0;
+    
 }
-
+.action button {
+    outline: 2px solid #e1f1fd;
+}
 button a {
     color: #e1f1fd;
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
+    /* test */
+    
 }
